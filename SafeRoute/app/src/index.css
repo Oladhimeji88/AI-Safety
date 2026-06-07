@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   SafeRoute — semantic surface tokens (light + dark)
+   Brand colors live in tailwind.config.js; these flip per theme.
+   ============================================================ */
+:root {
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-2: #F8FAFC;
+  --ink: #0B1F3A;
+  --ink-2: #475569;
+  --ink-3: #94a3b8;
+  --line: #e2e8f0;
+  --map-land: #eef2f7;
+  --map-water: #d8e6f3;
+  --map-road: #ffffff;
+  --map-road-major: #fde9c8;
+}
+.dark {
+  --bg: #0a1424;
+  --surface: #0f1c30;
+  --surface-2: #13243d;
+  --ink: #eaf1fb;
+  --ink-2: #9fb2cc;
+  --ink-3: #62748f;
+  --line: rgba(255,255,255,.08);
+  --map-land: #10203a;
+  --map-water: #0c2036;
+  --map-road: #1c3354;
+  --map-road-major: #2a4163;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background:
+    radial-gradient(60vw 60vw at 8% -10%, rgba(34,197,94,.10), transparent 60%),
+    radial-gradient(60vw 60vw at 100% 110%, rgba(11,31,58,.10), transparent 60%),
+    #eef2f8;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1,h2,h3,h4 { font-family: 'Sora', system-ui, sans-serif; letter-spacing: -.02em; }
+::selection { background: #22C55E; color: #04130a; }
+
+/* hide scrollbars inside phone screens */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
